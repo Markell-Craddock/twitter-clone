@@ -1,4 +1,4 @@
-A clone of Twitter's main home components using React, Hooks, & FireBase
+A fake clone of Twitter's main home components using React, Hooks, & FireBase
 
 Bootstrapped using create-react-app
 
