@@ -9,15 +9,19 @@ function TweetBox() {
 
   const sendTweet = (e) => {
     e.preventDefault();
-
-    db.collection("posts").add({
-      displayName: "John or Susie Doe",
-      username: "@johndoe555",
-      verified: true,
-      text: tweetMessage,
-      image: tweetImage,
-      avatar: "https://venturebeat.com/wp-content/uploads/2016/02/anonymous-face.shutterstock_365080829.jpg?w=1200&strip=all",
-    });
+    if (tweetMessage === "") {
+      alert("You must type a post, URL images are optional");
+    } else {
+      db.collection("posts").add({
+        displayName: "John Doe",
+        username: "johndoe555",
+        verified: true,
+        text: tweetMessage,
+        image: tweetImage,
+        avatar:
+          "https://venturebeat.com/wp-content/uploads/2016/02/anonymous-face.shutterstock_365080829.jpg?w=1200&strip=all",
+      });
+    }
 
     setTweetMessage("");
     setTweetImage("");
